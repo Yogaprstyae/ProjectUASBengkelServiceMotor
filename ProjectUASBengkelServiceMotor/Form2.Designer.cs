@@ -44,6 +44,7 @@
             this.btnMotor = new System.Windows.Forms.Button();
             this.btnService = new System.Windows.Forms.Button();
             this.btnSparepart = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panelmenul.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -212,11 +213,24 @@
             this.btnSparepart.UseVisualStyleBackColor = true;
             this.btnSparepart.Click += new System.EventHandler(this.btnSparepart_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = global::ProjectUASBengkelServiceMotor.Properties.Resources.arrow_back_icon_151627;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(168, 6);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(86, 37);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Halaman_Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -252,5 +266,6 @@
         private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSparepart;
+        private System.Windows.Forms.Button btnBack;
     }
 }

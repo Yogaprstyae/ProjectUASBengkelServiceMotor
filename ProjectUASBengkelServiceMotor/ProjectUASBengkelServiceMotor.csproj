@@ -82,8 +82,44 @@
     <Compile Include="Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Melakukan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Melakukan.Designer.cs">
+      <DependentUpon>Melakukan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membayar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Membayar.Designer.cs">
+      <DependentUpon>Membayar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Memerlukan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Memerlukan.Designer.cs">
+      <DependentUpon>Memerlukan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Memiliki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Memiliki.Designer.cs">
+      <DependentUpon>Memiliki.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relasi.Designer.cs">
+      <DependentUpon>Relasi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +138,21 @@
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Melakukan.resx">
+      <DependentUpon>Melakukan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Membayar.resx">
+      <DependentUpon>Membayar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Memerlukan.resx">
+      <DependentUpon>Memerlukan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Memiliki.resx">
+      <DependentUpon>Memiliki.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,6 +163,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relasi.resx">
+      <DependentUpon>Relasi.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -190,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo Bengkel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Bengkel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_back_icon_151627.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

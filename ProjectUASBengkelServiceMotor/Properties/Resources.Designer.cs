@@ -143,6 +143,16 @@ namespace ProjectUASBengkelServiceMotor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_back_icon_151627 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_back_icon_151627", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circle_customer_help_info_information_service_support_icon_123208 {
             get {
                 object obj = ResourceManager.GetObject("circle_customer_help_info_information_service_support_icon_123208", resourceCulture);
@@ -246,6 +256,16 @@ namespace ProjectUASBengkelServiceMotor.Properties {
         internal static System.Drawing.Bitmap Logo_Bengkel3 {
             get {
                 object obj = ResourceManager.GetObject("Logo Bengkel3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Bengkel4 {
+            get {
+                object obj = ResourceManager.GetObject("Logo Bengkel4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

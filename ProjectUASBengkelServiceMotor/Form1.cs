@@ -64,7 +64,7 @@ namespace ProjectUASBengkelServiceMotor
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Halaman_Homepage fa = new Halaman_Homepage();
+            Halaman_PilihData fa = new Halaman_PilihData();
             fa.Show();
             Hide();
         }

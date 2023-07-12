@@ -86,5 +86,12 @@ namespace ProjectUASBengkelServiceMotor
             fd.Show();
             Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Halaman_PilihData fa = new Halaman_PilihData();
+            fa.Show();
+            Hide();
+        }
     }
 }
