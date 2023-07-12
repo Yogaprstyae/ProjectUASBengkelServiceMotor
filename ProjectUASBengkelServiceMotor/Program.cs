@@ -16,7 +16,7 @@ namespace ProjectUASBengkelServiceMotor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Halaman_Login());
+            Application.Run(new Halaman_Utama());
         }
     }
 }

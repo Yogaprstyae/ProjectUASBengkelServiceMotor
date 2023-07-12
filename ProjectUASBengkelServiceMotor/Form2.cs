@@ -10,32 +10,80 @@ using System.Windows.Forms;
 
 namespace ProjectUASBengkelServiceMotor
 {
-    public partial class Halaman_DataDiriCustomer : Form
+    public partial class Halaman_Homepage : Form
     {
-        public Halaman_DataDiriCustomer()
+        bool sidebarExpand;
+        public Halaman_Homepage()
         {
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void Halaman_DataDiriCustomer_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void sidebarTimer_Tick(object sender, EventArgs e)
         {
-            Halaman_Login fa = new Halaman_Login();
+            if (sidebarExpand)
+            {
+                sidebar.Width -= 10;
+                if (sidebar.Width == sidebar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                sidebar.Width += 10;
+                if (sidebar.Width == sidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            Halaman_Customer fa = new Halaman_Customer();
             fa.Show();
+            Hide();
+        }
+
+        private void btnMotor_Click(object sender, EventArgs e)
+        {
+            Halaman_Motor fb = new Halaman_Motor();
+            fb.Show();
+            Hide();
+        }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            Halaman_Service fc = new Halaman_Service();
+            fc.Show();
+            Hide();
+        }
+
+        private void btnSparepart_Click(object sender, EventArgs e)
+        {
+            Halaman_Sparepart fd = new Halaman_Sparepart();
+            fd.Show();
             Hide();
         }
     }

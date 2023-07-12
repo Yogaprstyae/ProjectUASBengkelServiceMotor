@@ -11,30 +11,27 @@ using System.Windows.Forms;
 
 namespace ProjectUASBengkelServiceMotor
 {
-    public partial class Halaman_Motor : Form
+    public partial class Halaman_Sparepart : Form
     {
         private string stringConnection = "data source=INBOOK_X1\\MYOGAPRSTYAE;" + "database=Service;User ID=sa;Password=123";
         private SqlConnection koneksi;
         private void refreshform()
         {
-            txtNo.Text = "";
-            txtNo.Enabled = false;
-            txtWarna.Text = "";
-            txtWarna.Enabled = false;
-            cbxMerk.Text = "";
-            cbxMerk.Enabled = false;
+            txtsparepart.Text = "";
+            txtsparepart.Enabled = false;
+            txtnmsparepart.Text = "";
+            txtnmsparepart.Enabled = false;
+            txtstok.Text = "";
+            txtstok.Enabled = false;
+            txtharga.Text = "";
+            txtharga.Enabled = false;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
-        public Halaman_Motor()
+        public Halaman_Sparepart()
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -44,48 +41,60 @@ namespace ProjectUASBengkelServiceMotor
             Hide();
         }
 
-        private void Halaman_Motor_Load(object sender, EventArgs e)
+        private void Halaman_Sparepart_Load(object sender, EventArgs e)
         {
 
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtNo.Enabled = true;
-            txtWarna.Enabled = true;
-            cbxMerk.Enabled = true;
+            txtsparepart.Enabled = true;
+            txtnmsparepart.Enabled = true;
+            txtstok.Enabled = true;
+            txtharga.Enabled = true;
             btnSave.Enabled = true;
             btnClear.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string noPolisi = txtNo.Text.Trim();
-            string warna = txtWarna.Text.Trim();
-            string merk = cbxMerk.Text.Trim();
+            string idSparepart = txtsparepart.Text.Trim();
+            string nmSparepart = txtnmsparepart.Text.Trim();
+            string stok = txtstok.Text.Trim();
+            decimal harga;
 
-            if (noPolisi == "")
+            if (idSparepart == "")
             {
-                MessageBox.Show("Masukkan Nomor Polisi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan ID Sparepart", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (warna == "")
+            else if (nmSparepart == "")
             {
-                MessageBox.Show("Masukkan Warna Motor", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Nama Sparepart", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (merk == "")
+            else if (stok == "")
             {
-                MessageBox.Show("Masukkan Merk Motor", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Stok", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!decimal.TryParse(txtharga.Text.Trim(), out harga))
+            {
+                MessageBox.Show("Masukkan Harga dengan format yang benar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 try
                 {
                     koneksi.Open();
-                    string query = "INSERT INTO Motor (no_polisi, warna, merk) VALUES (@no_polisi, @warna, @merk)";
+                    string query = "INSERT INTO sparepart (id_sparepart, nm_sparepart, stok, harga) VALUES (@id_sparepart, @nm_sparepart, @stok, @harga)";
                     SqlCommand command = new SqlCommand(query, koneksi);
-                    command.Parameters.AddWithValue("@no_polisi", noPolisi);
-                    command.Parameters.AddWithValue("@warna", warna);
-                    command.Parameters.AddWithValue("@merk", merk);
+                    command.Parameters.AddWithValue("@id_sparepart", idSparepart);
+                    command.Parameters.AddWithValue("@nm_sparepart", nmSparepart);
+                    command.Parameters.AddWithValue("@stok", stok);
+                    command.Parameters.AddWithValue("@harga", harga);
                     command.ExecuteNonQuery();
                     koneksi.Close();
 
@@ -102,32 +111,27 @@ namespace ProjectUASBengkelServiceMotor
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "SELECT no_polisi, warna, merk FROM Motor";
+            string str = "SELECT id_sparepart, nm_sparepart, stok, harga FROM sparepart";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                txtNo.Text = row.Cells["no_polisi"].Value.ToString();
-                txtWarna.Text = row.Cells["warna"].Value.ToString();
-                cbxMerk.Text = row.Cells["merk"].Value.ToString();
+                txtsparepart.Text = row.Cells["id_sparepart"].Value.ToString();
+                txtnmsparepart.Text = row.Cells["nm_sparepart"].Value.ToString();
+                txtstok.Text = row.Cells["stok"].Value.ToString();
+                txtharga.Text = row.Cells["harga"].Value.ToString();
 
-                txtNo.Enabled = false;
+                txtsparepart.Enabled = false;
                 btnSave.Enabled = false;
                 btnClear.Enabled = true;
             }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            refreshform();
         }
 
         private void btnOpen_Click(object sender, EventArgs e)

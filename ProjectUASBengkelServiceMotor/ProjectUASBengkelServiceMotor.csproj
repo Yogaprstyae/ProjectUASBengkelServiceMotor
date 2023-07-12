@@ -64,6 +64,24 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -74,6 +92,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +133,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon Bengkel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Bengkel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Bengkel.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643745-human-man-people-person-profile_113435.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross_country_motorcycle_vehicle_transport_icon_208512.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electronic_repair_service_tool_equipment_icon_193578.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904675-configuration-edit-gear-options-preferences-setting-settings_122525.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4092564_profile_about_mobile ui_user_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4092564_profile_about_mobile ui_user_icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3668833_maintenance_repair_service_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_avatar_face_man_people_profile_user_icon_123197.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_avatar_face_man_people_profile_user_icon_1231971.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_customer_help_info_information_service_support_icon_123208.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849830-gear-interface-multimedia-options-setting-settings_107986.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_icon_2_icon-icons.com_71856.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SL-092920-35860-24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Bengkel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Bengkel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Bengkel2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
